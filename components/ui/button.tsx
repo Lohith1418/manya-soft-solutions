@@ -17,6 +17,8 @@ const buttonVariants = cva(
           "bg-transparent border-2 border-white text-white hover:bg-white/10",
         icon: 
           "bg-[#EEF3FB] text-brand-primary rounded-full hover:bg-brand-primary hover:text-white",
+        outline:
+          "border-2 border-current bg-transparent",
       },
       size: {
         default: "px-[32px] py-[14px] rounded-pill",
