@@ -67,8 +67,11 @@ export function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-4">
-          <Button variant={useDarkText ? "secondary" : "ghost"}>Schedule a Call</Button>
-          <Button variant="default">Get a Quote</Button>
+          {pathname !== "/contact" && (
+            <Button variant="default" asChild>
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          )}
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -94,8 +97,11 @@ export function Navbar() {
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           </nav>
           <div className="flex flex-col gap-4 mt-8">
-            <Button variant="secondary" className="w-full">Schedule a Call</Button>
-            <Button variant="default" className="w-full">Get a Quote</Button>
+            {pathname !== "/contact" && (
+              <Button variant="default" className="w-full" asChild>
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+              </Button>
+            )}
           </div>
         </div>
       )}

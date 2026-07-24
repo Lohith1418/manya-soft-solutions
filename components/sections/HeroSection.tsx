@@ -8,6 +8,7 @@ import { RevealAnimation } from "@/components/shared/RevealAnimation";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { ChevronDown } from "lucide-react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const GlobeComponent = dynamic(() => import("@/components/animations/GlobeComponent").then(m => m.GlobeComponent), { ssr: false });
 
@@ -39,8 +40,9 @@ export function HeroSection() {
           </RevealAnimation>
           
           <RevealAnimation delay={0.4} className="flex flex-col sm:flex-row gap-4 mt-4">
-            <GradientButton size="lg">Start Your Project &rarr;</GradientButton>
-            <Button size="lg" variant="ghost">Explore Our Work</Button>
+            <GradientButton size="lg" asChild>
+              <Link href="/case-studies">Explore Our Work</Link>
+            </GradientButton>
           </RevealAnimation>
         </div>
 

@@ -14,7 +14,7 @@ export default function AboutPage() {
             MANYA Soft Solutions was founded with a singular purpose: to bridge the gap between enterprise-grade technology and agile, transparent delivery. Too often, organizations are forced to choose between the reliability of massive global integrators and the speed of boutique agencies. We exist to provide both.
           </p>
           <p>
-            Headquartered in Tirupati, India, our global delivery model enables us to tap into world-class engineering talent while maintaining overlap with US, European, and APAC business hours.
+            Headquartered in India, our global delivery model enables us to tap into world-class engineering talent while maintaining overlap with US, European, and APAC business hours.
           </p>
         </div>
       </RevealAnimation>
@@ -46,7 +46,7 @@ export default function AboutPage() {
       <RevealAnimation delay={0.2}>
         <h2 className="text-3xl font-bold text-text-primary mb-6">Global Presence</h2>
         <p className="text-lg text-text-secondary mb-8">
-          While our core engineering operations are based in Tirupati, our clients are distributed globally. We operate dedicated pods tailored to the specific timezones and cultural nuances of the organizations we serve.
+          While our core engineering operations are based in India, our clients are distributed globally. We operate dedicated pods tailored to the specific timezones and cultural nuances of the organizations we serve.
         </p>
         <div className="aspect-[21/9] bg-brand-secondary rounded-2xl overflow-hidden flex items-center justify-center relative shadow-sm border border-border-default">
            <svg viewBox="0 0 1000 500" className="w-full h-auto text-white opacity-20 absolute" fill="currentColor">
@@ -57,7 +57,7 @@ export default function AboutPage() {
              <circle cx="750" cy="200" r="15" className="text-brand-highlight opacity-100" />
            </svg>
            <div className="z-10 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-white font-semibold border border-white/20">
-             Tirupati HQ
+             India HQ
            </div>
         </div>
       </RevealAnimation>

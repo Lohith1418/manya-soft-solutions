@@ -34,7 +34,7 @@ export function Footer() {
               <Link href="#" aria-label="Instagram" className="hover:text-brand-primary transition-colors"><SocialIcon type="instagram" /></Link>
             </div>
             <div className="text-sm text-white/70 mt-4">
-              <p>Tirupati, India</p>
+              <p>India</p>
               <p>+91 123 456 7890</p>
             </div>
           </div>

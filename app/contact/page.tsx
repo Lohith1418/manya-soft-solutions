@@ -93,11 +93,11 @@ export default function ContactPage() {
                 <div className="bg-surface-subtle p-8 rounded-2xl border border-border-default mb-6 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-2 h-full bg-brand-primary"></div>
                   <h3 className="text-xl font-bold text-text-primary flex items-center gap-2 mb-4">
-                    <MapPin className="text-brand-primary" size={20} /> India HQ (Tirupati)
+                    <MapPin className="text-brand-primary" size={20} /> India HQ
                   </h3>
                   <p className="text-text-secondary leading-relaxed mb-4">
                     MANYA Soft Solutions Pvt Ltd.<br />
-                    Tirupati, Andhra Pradesh<br />
+                    India<br />
                     India
                   </p>
                   <div className="flex items-center gap-3 text-text-secondary text-sm">

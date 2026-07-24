@@ -29,7 +29,7 @@ export default async function JobDetailPage(props: { params: Promise<{ role: str
             </Link>
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <span className="px-3 py-1 bg-white border border-border-strong rounded-md text-xs font-bold text-text-primary uppercase tracking-widest">Engineering</span>
-              <span className="px-3 py-1 bg-white border border-border-strong rounded-md text-xs font-bold text-text-primary uppercase tracking-widest">Remote / Tirupati</span>
+              <span className="px-3 py-1 bg-white border border-border-strong rounded-md text-xs font-bold text-text-primary uppercase tracking-widest">Remote / India</span>
               <span className="px-3 py-1 bg-white border border-border-strong rounded-md text-xs font-bold text-text-primary uppercase tracking-widest">Full-Time</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-black font-display text-text-primary tracking-tight mb-8">

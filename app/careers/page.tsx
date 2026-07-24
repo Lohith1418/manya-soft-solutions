@@ -10,8 +10,8 @@ export const metadata = {
 };
 
 const positions = [
-  { slug: "senior-frontend-engineer", title: "Senior Frontend Engineer (React/Next.js)", dept: "Engineering", location: "Tirupati / Remote", type: "Full-time" },
-  { slug: "cloud-infrastructure-architect", title: "Cloud Infrastructure Architect", dept: "DevOps", location: "Tirupati / Remote", type: "Full-time" },
+  { slug: "senior-frontend-engineer", title: "Senior Frontend Engineer (React/Next.js)", dept: "Engineering", location: "India / Remote", type: "Full-time" },
+  { slug: "cloud-infrastructure-architect", title: "Cloud Infrastructure Architect", dept: "DevOps", location: "India / Remote", type: "Full-time" },
   { slug: "machine-learning-researcher", title: "Machine Learning Researcher", dept: "AI Labs", location: "Remote", type: "Full-time" },
   { slug: "enterprise-account-executive", title: "Enterprise Account Executive", dept: "Sales", location: "US / Remote", type: "Full-time" }
 ];

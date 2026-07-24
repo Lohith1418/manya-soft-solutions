@@ -26,7 +26,7 @@ export function DeliveryModelSection() {
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">India HQ (Tirupati)</h4>
+                    <h4 className="font-bold text-lg">India HQ</h4>
                     <p className="text-text-secondary text-sm">State-of-the-art offshore delivery center housing our core engineering and architecture teams.</p>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ export function DeliveryModelSection() {
                <div className="w-4 h-4 bg-brand-primary rounded-full animate-ping absolute"></div>
                <div className="w-4 h-4 bg-brand-primary rounded-full relative z-10 border-2 border-white"></div>
                <div className="mt-2 bg-brand-secondary text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg">
-                 TIRUPATI
+                 INDIA
                </div>
              </div>
           </RevealAnimation>

@@ -7,7 +7,6 @@ import { IndustriesSection } from "@/components/sections/IndustriesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { TechStackSection } from "@/components/sections/TechStackSection";
 import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { DeliveryModelSection } from "@/components/sections/DeliveryModelSection";
 import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
@@ -28,7 +27,6 @@ export default function Home() {
       <ProcessSection />
       <TechStackSection />
       <CaseStudiesSection />
-      <TestimonialsSection />
       <DeliveryModelSection />
       <FinalCTASection />
     </>
