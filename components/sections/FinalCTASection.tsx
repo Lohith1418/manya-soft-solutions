@@ -19,9 +19,6 @@ export function FinalCTASection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
-            <Button size="lg" variant="secondary" className="bg-white text-brand-primary border-white hover:bg-surface-muted w-full sm:w-auto" asChild>
-              <Link href="/contact">Schedule a Free Consultation</Link>
-            </Button>
             <Button size="lg" variant="ghost" className="w-full sm:w-auto" asChild>
               <Link href="/contact">Send Us a Message</Link>
             </Button>

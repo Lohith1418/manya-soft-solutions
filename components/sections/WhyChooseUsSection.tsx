@@ -3,7 +3,7 @@
 import { PageContainer } from "@/components/shared/PageContainer";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { RevealAnimation } from "@/components/shared/RevealAnimation";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Shield, Zap, HeartHandshake } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -18,40 +18,48 @@ const pillars = [
 
 export function WhyChooseUsSection() {
   return (
-    <section className="w-full bg-white py-24 overflow-hidden">
+    <section className="w-full bg-white py-16 md:py-24 overflow-hidden">
       <PageContainer>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
           
-          {/* Left Visual Placeholder (Abstract Tech Graphic) */}
-          <RevealAnimation delay={0.2} className="w-full h-full min-h-[500px] bg-gradient-hero rounded-3xl relative overflow-hidden flex items-center justify-center p-12">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
-            <div className="relative z-10 grid grid-cols-2 gap-4 w-full h-full">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 flex flex-col justify-end">
-                 <div className="w-12 h-12 rounded-full bg-brand-highlight mb-4"></div>
-                 <div className="h-4 w-3/4 bg-white/50 rounded"></div>
+          {/* Left Visual — Clean gradient with key highlights */}
+          <RevealAnimation delay={0.2} className="w-full min-h-[350px] md:min-h-[500px] bg-gradient-hero rounded-2xl md:rounded-3xl relative overflow-hidden flex items-center justify-center p-8 md:p-12">
+            <div className="relative z-10 flex flex-col items-center text-center gap-6 md:gap-8">
+              <div className="flex gap-4 md:gap-6">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                  <Shield className="text-white" size={28} />
+                </div>
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                  <Zap className="text-brand-highlight" size={28} />
+                </div>
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                  <HeartHandshake className="text-accent-green" size={28} />
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 flex flex-col justify-end translate-y-8">
-                 <div className="w-12 h-12 rounded-full bg-accent-green mb-4"></div>
-                 <div className="h-4 w-1/2 bg-white/50 rounded"></div>
-              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight max-w-sm">
+                Your Success Is Our Only Metric
+              </h3>
+              <p className="text-white/70 text-sm md:text-base max-w-xs leading-relaxed">
+                Enterprise reliability meets startup agility. We bring both to every engagement.
+              </p>
             </div>
           </RevealAnimation>
 
           {/* Right Content */}
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-8 md:gap-10">
             <SectionHeader
               eyebrow="OUR PROMISE"
               heading="Engineered for Enterprise. Built for Humans."
               subheading="Working with a technology partner should feel like having a world-class team on your side — not managing a vendor at arm's length."
             />
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
               {pillars.map((pillar, i) => (
                 <RevealAnimation key={i} delay={0.1 * i} yOffset={20}>
-                  <div className="flex gap-4 items-start">
-                    <CheckCircle2 className="text-brand-primary shrink-0 mt-1" size={24} />
+                  <div className="flex gap-3 md:gap-4 items-start">
+                    <CheckCircle2 className="text-brand-primary shrink-0 mt-1" size={22} />
                     <div>
-                      <h4 className="font-bold text-text-primary text-lg mb-1">{pillar.title}</h4>
+                      <h4 className="font-bold text-text-primary text-base md:text-lg mb-1">{pillar.title}</h4>
                       <p className="text-text-secondary text-sm leading-relaxed">{pillar.desc}</p>
                     </div>
                   </div>
@@ -60,7 +68,7 @@ export function WhyChooseUsSection() {
             </div>
 
             <RevealAnimation delay={0.6}>
-              <Button asChild size="lg" className="mt-4">
+              <Button asChild size="lg" className="mt-2 md:mt-4 w-full sm:w-auto">
                 <Link href="/about/why-us">See How We Work &rarr;</Link>
               </Button>
             </RevealAnimation>
@@ -70,3 +78,4 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
+

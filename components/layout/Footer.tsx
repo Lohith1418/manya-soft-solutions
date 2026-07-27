@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageContainer } from "@/components/shared/PageContainer";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/shared/Logo";
 
 const SocialIcon = ({ type }: { type: string }) => {
   if (type === "linkedin") return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>;
@@ -17,15 +18,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1 flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-brand-primary text-white flex items-center justify-center font-bold font-display rounded-sm">
-                M
-              </div>
-              <div className="flex flex-col font-display">
-                <span className="font-bold tracking-tight text-lg leading-tight">MANYA</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/70 leading-none">Soft Solutions</span>
-              </div>
-            </Link>
+            <Logo useDarkText={false} />
             <p className="text-white/70 text-sm">Smart Solutions. Stronger Tomorrow.</p>
             <div className="flex gap-4">
               <Link href="#" aria-label="LinkedIn" className="hover:text-brand-primary transition-colors"><SocialIcon type="linkedin" /></Link>
@@ -80,15 +73,15 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-6 tracking-wide">Stay Connected</h3>
             <div className="flex flex-col gap-4">
               <p className="text-sm text-white/70">Subscribe to our newsletter for insights and updates.</p>
-              <div className="flex gap-2">
+              <div className="flex flex-col gap-3">
                 <input 
                   type="email" 
                   placeholder="Your email address" 
                   className="bg-white/10 border border-white/20 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-primary w-full"
                 />
-                <Button variant="default">Subscribe</Button>
+                <Button variant="default" className="w-full">Subscribe</Button>
               </div>
-              <Button variant="ghost" className="w-full mt-2">Get a Quote</Button>
+
             </div>
           </div>
         </div>

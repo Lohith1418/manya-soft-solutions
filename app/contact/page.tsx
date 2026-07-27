@@ -98,32 +98,17 @@ export default function ContactPage() {
                   <p className="text-text-secondary leading-relaxed mb-4">
                     MANYA Soft Solutions Pvt Ltd.<br />
                     India<br />
-                    India
                   </p>
                   <div className="flex items-center gap-3 text-text-secondary text-sm">
                     <Phone size={16} className="text-brand-primary" /> +91 98765 43210
                   </div>
                 </div>
 
-                <div className="bg-white p-8 rounded-2xl border border-border-default mb-6 hover:border-brand-primary transition-colors">
-                  <h3 className="text-xl font-bold text-text-primary flex items-center gap-2 mb-4">
-                    <MapPin className="text-text-secondary" size={20} /> North America
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed mb-4">
-                    100 Tech Corridor Suite 400<br />
-                    Austin, TX 78701<br />
-                    United States
-                  </p>
-                </div>
-
                 <div className="bg-[#142036] p-8 rounded-2xl border border-white/10 text-white">
                   <h3 className="text-xl font-bold mb-4">Direct Contact</h3>
                   <div className="flex flex-col gap-4">
-                    <a href="mailto:contact@manyasoft.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                      <Mail size={18} className="text-brand-highlight" /> contact@manyasoft.com
-                    </a>
-                    <a href="mailto:careers@manyasoft.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                      <Mail size={18} className="text-brand-highlight" /> careers@manyasoft.com
+                    <a href="mailto:info@manyasoftsolutions.com " className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                      <Mail size={18} className="text-brand-highlight" /> info@manyasoftsolutions.com
                     </a>
                   </div>
                 </div>

@@ -26,6 +26,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "MANYA Soft Solutions | Enterprise IT Consulting & Software Services",
   description: "MANYA Soft Solutions delivers enterprise-grade software, cloud infrastructure, and AI-powered transformation.",
+  icons: {
+    icon: "/logo-icon.png",
+    shortcut: "/logo-icon.png",
+    apple: "/logo-icon.png",
+  },
   openGraph: {
     title: "MANYA Soft Solutions",
     description: "Enterprise IT Consulting & Software Services",

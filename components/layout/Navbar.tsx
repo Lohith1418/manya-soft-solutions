@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageContainer } from "@/components/shared/PageContainer";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/shared/Logo";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,18 +42,7 @@ export function Navbar() {
     >
       <PageContainer className="h-full flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-brand-primary text-white flex items-center justify-center font-bold font-display rounded-sm">
-            M
-          </div>
-          <div className={cn(
-            "flex flex-col font-display",
-            useDarkText ? "text-text-primary" : "text-white"
-          )}>
-            <span className="font-bold tracking-tight text-lg leading-tight">MANYA</span>
-            <span className="text-[10px] uppercase tracking-widest text-text-secondary leading-none">Soft Solutions</span>
-          </div>
-        </Link>
+        <Logo useDarkText={useDarkText} />
 
         {/* Desktop Nav */}
         <nav className={cn(
