@@ -100,7 +100,7 @@ export default function ContactPage() {
                     India<br />
                   </p>
                   <div className="flex items-center gap-3 text-text-secondary text-sm">
-                    <Phone size={16} className="text-brand-primary" /> +91 98765 43210
+                    <Phone size={16} className="text-brand-primary" /> +91 7760228409
                   </div>
                 </div>
 

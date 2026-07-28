@@ -49,7 +49,6 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-6 tracking-wide">Company</h3>
             <ul className="flex flex-col gap-3 text-sm text-white/70">
               <li><Link href="/about" className="hover:text-brand-primary transition-colors">About Us</Link></li>
-              <li><Link href="/about/leadership" className="hover:text-brand-primary transition-colors">Leadership</Link></li>
               <li><Link href="/case-studies" className="hover:text-brand-primary transition-colors">Case Studies</Link></li>
               <li><Link href="/careers" className="hover:text-brand-primary transition-colors">Careers</Link></li>
               <li><Link href="/contact" className="hover:text-brand-primary transition-colors">Contact</Link></li>

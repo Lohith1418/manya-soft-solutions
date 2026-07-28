@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 
 const sidebarLinks = [
   { name: "Company Overview", href: "/about" },
-  { name: "Leadership Team", href: "/about/leadership" },
   { name: "Mission & Vision", href: "/about/mission-vision" },
   { name: "Why Choose Us", href: "/about/why-us" },
 ];
