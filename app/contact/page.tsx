@@ -64,18 +64,18 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="name" className="text-sm font-bold text-text-primary">Full Name</label>
-                      <input id="name" name="name" type="text" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="John Doe" />
+                      <input id="name" name="name" type="text" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="Your Name" />
                     </div>
                     <div className="flex flex-col gap-2">
                       <label htmlFor="email" className="text-sm font-bold text-text-primary">Work Email</label>
-                      <input id="email" name="email" type="email" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="john@company.com" />
+                      <input id="email" name="email" type="email" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="[EMAIL_ADDRESS]" />
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="company" className="text-sm font-bold text-text-primary">Company Name</label>
-                      <input id="company" name="company" type="text" className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="Acme Corp" />
+                      <input id="company" name="company" type="text" className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="Your Company Name" />
                     </div>
                     <div className="flex flex-col gap-2">
                       <label htmlFor="service" className="text-sm font-bold text-text-primary">Service of Interest</label>
