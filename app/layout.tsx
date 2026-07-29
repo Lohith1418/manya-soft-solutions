@@ -34,9 +34,14 @@ export const metadata: Metadata = {
     canonical: "https://www.manyasoftsolutions.com",
   },
   icons: {
-    icon: "/logo-icon.png",
-    shortcut: "/logo-icon.png",
-    apple: "/logo-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo-icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/logo-icon.png", sizes: "180x180", type: "image/png" }
+    ],
   },
   openGraph: {
     title: "MANYA Soft Solutions | Enterprise IT Consulting & Software Services",
