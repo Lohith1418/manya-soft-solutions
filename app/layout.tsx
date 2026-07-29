@@ -24,21 +24,28 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MANYA Soft Solutions | Enterprise IT Consulting & Software Services",
+  metadataBase: new URL("https://www.manyasoftsolutions.com"),
+  title: {
+    default: "MANYA Soft Solutions | Enterprise IT Consulting & Software Services",
+    template: "%s | MANYA Soft Solutions",
+  },
   description: "MANYA Soft Solutions delivers enterprise-grade software, cloud infrastructure, and AI-powered transformation.",
+  alternates: {
+    canonical: "https://www.manyasoftsolutions.com",
+  },
   icons: {
     icon: "/logo-icon.png",
     shortcut: "/logo-icon.png",
     apple: "/logo-icon.png",
   },
   openGraph: {
-    title: "MANYA Soft Solutions",
-    description: "Enterprise IT Consulting & Software Services",
-    url: "https://manyasoft.com",
+    title: "MANYA Soft Solutions | Enterprise IT Consulting & Software Services",
+    description: "MANYA Soft Solutions delivers enterprise-grade software, cloud infrastructure, and AI-powered transformation.",
+    url: "https://www.manyasoftsolutions.com",
     siteName: "MANYA Soft Solutions",
     images: [
       {
-        url: "https://manyasoft.com/og-image.jpg",
+        url: "https://www.manyasoftsolutions.com/logo.png",
         width: 1200,
         height: 630,
         alt: "MANYA Soft Solutions",
@@ -51,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MANYA Soft Solutions",
     description: "Enterprise IT Consulting & Software Services",
-    images: ["https://manyasoft.com/og-image.jpg"],
+    images: ["https://www.manyasoftsolutions.com/logo.png"],
   },
 };
 
@@ -60,8 +67,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MANYA Soft Solutions",
+    "url": "https://www.manyasoftsolutions.com",
+    "logo": "https://www.manyasoftsolutions.com/logo.png",
+    "description": "Enterprise IT Consulting & Software Services",
+    "sameAs": [],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-surface-page text-text-primary font-body antialiased",
