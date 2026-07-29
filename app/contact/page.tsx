@@ -12,11 +12,31 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
-    
-    // Simulate API call to /api/contact
-    setTimeout(() => {
-      setStatus("success");
-    }, 1500);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      company: formData.get("company"),
+      service: formData.get("service"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
   };
 
   return (
@@ -44,22 +64,22 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="name" className="text-sm font-bold text-text-primary">Full Name</label>
-                      <input id="name" type="text" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="John Doe" />
+                      <input id="name" name="name" type="text" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="John Doe" />
                     </div>
                     <div className="flex flex-col gap-2">
                       <label htmlFor="email" className="text-sm font-bold text-text-primary">Work Email</label>
-                      <input id="email" type="email" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="john@company.com" />
+                      <input id="email" name="email" type="email" required className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="john@company.com" />
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="company" className="text-sm font-bold text-text-primary">Company Name</label>
-                      <input id="company" type="text" className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="Acme Corp" />
+                      <input id="company" name="company" type="text" className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all" placeholder="Acme Corp" />
                     </div>
                     <div className="flex flex-col gap-2">
                       <label htmlFor="service" className="text-sm font-bold text-text-primary">Service of Interest</label>
-                      <select id="service" className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all text-text-primary">
+                      <select id="service" name="service" className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all text-text-primary">
                         <option value="software">Custom Software Development</option>
                         <option value="cloud">Cloud Infrastructure</option>
                         <option value="ai">AI & Machine Learning</option>
@@ -71,7 +91,7 @@ export default function ContactPage() {
 
                   <div className="flex flex-col gap-2">
                     <label htmlFor="message" className="text-sm font-bold text-text-primary">Project Details</label>
-                    <textarea id="message" required rows={5} className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all resize-none" placeholder="Tell us about your technical challenges and business goals..."></textarea>
+                    <textarea id="message" name="message" required rows={5} className="px-4 py-3 rounded-lg border border-border-strong bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all resize-none" placeholder="Tell us about your technical challenges and business goals..."></textarea>
                   </div>
 
                   <Button type="submit" size="lg" disabled={status === "loading" || status === "success"} className="w-full md:w-auto self-start mt-4">

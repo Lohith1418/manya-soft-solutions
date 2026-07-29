@@ -28,7 +28,7 @@ export function Footer() {
             </div>
             <div className="text-sm text-white/70 mt-4">
               <p>India</p>
-              <p>+91 123 456 7890</p>
+              <p>+91 7760228409</p>
             </div>
           </div>
 
