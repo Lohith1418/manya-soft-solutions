@@ -1,6 +1,5 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ClientLogosSection } from "@/components/sections/ClientLogosSection";
-import { MetricsSection } from "@/components/sections/MetricsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
 import { IndustriesSection } from "@/components/sections/IndustriesSection";
@@ -20,7 +19,6 @@ export default function Home() {
     <>
       <HeroSection />
       <ClientLogosSection />
-      <MetricsSection />
       <ServicesSection />
       <WhyChooseUsSection />
       <IndustriesSection />
